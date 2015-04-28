@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface ShoppingCart {
 
-	public List<Product> getShoppingProducts();
+	public List<String> getShoppingProducts();
 
 	public void checkOut(String listOfProducts);
 

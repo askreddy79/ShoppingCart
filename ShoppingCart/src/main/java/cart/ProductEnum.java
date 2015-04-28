@@ -7,21 +7,20 @@ import java.math.BigDecimal;
  */
 
 public enum ProductEnum {
-	Apple ("Apple",0.60),
-	Orange ("Orange",0.25);
+	Apple("Apple", 0.60), Orange("Orange", 0.25);
 
 	private final String name;
 	private final double price;
 
-	private ProductEnum(final String name,final double price) {
-		this.name =  name;
+	private ProductEnum(final String name, final double price) {
+		this.name = name;
 		this.price = price;
 	}
-	
+
 	public String getPropertyName() {
 		return name;
 	}
-	
+
 	public static ProductEnum fromPropertyName(String value) {
 		for (ProductEnum product : ProductEnum.values()) {
 			if (value.equalsIgnoreCase(product.getPropertyName())) {
@@ -30,10 +29,9 @@ public enum ProductEnum {
 		}
 		return null;
 	}
-	
+
 	public BigDecimal getPrice() {
 		return BigDecimal.valueOf(price);
 	}
-	
 
 }
